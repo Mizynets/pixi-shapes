@@ -72,13 +72,6 @@ const createShape = (type, cb) => {
               hexagon.area = Math.floor((hexagonHeight * hexagonRadius)/2);
             return hexagon
         } 
-        // case "star": {
-        //     const star = cb();
-        //     star.drawStar(0, 0, 4, 50)
-        //     star.area = 777
-        //     return star
-        // } 
-
         default : {
             const rectangle = cb();
             rectangle.drawRect(0, 0, 100, 100)

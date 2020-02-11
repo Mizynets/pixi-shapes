@@ -51,12 +51,9 @@ app.renderer.backgroundColor = WHITE;
 document.querySelector("#root").appendChild(app.view);
 const mousePosition = app.renderer.plugins.interaction.mouse.global;
 
-// let flag = false // for allow draw custom shape
-
 root.addEventListener("click", e => {
-   
         model.drawCustomShape()
-    
+    /* attempt to solve the bug with removing the main figures */
 //   shapesCountInRec.some(shape => {
 //     const isLeftTop = mousePosition.x < shape.x && mousePosition.y < shape.y;
 //     const isRightBottom =
@@ -122,18 +119,11 @@ const view = {
     }, 1000);
 
     app.ticker.add(() => {
-        // flag = false
       model.shapesCountAndArea();
       for (let i = 0; i < shapes.length; i++) {
 
         const shape = shapes[i];
         shape.y += gravity;
-        // const isLeftTop = mousePosition.x < shape.x && mousePosition.y < shape.y;
-        // const isRightBottom = mousePosition.x > shape.x + 100 && mousePosition.y > shape.y + 100;
-    
-        // if (isLeftTop || isRightBottom) {
-        //     flag = true
-        // }
         if (app.screen.height + 100 < shape.y) {
           shapes = shapes.filter((el, indx) => indx !== i);
         }
