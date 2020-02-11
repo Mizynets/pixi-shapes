@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shapes</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/node-uuid/1.4.8/uuid.min.js"></script>
+</head>
+<script src="./node_modules/pixi.js/dist/pixi.min.js"></script>
+<body>
+    <div class="container">
+        <div class="info">
+            <div class="info__shapes">
+                <div class="info__num-of-shapes"></div>
+                <span>- Number of current shapes</span>    
+            </div>
+            <div class="info__area">
+                <div class="info__surface-area"></div>
+                <span>- Surface area occupied by shapes</span>    
+            </div>
+            
+        </div>
+        <div id="root"></div>
+        <div class="control-flex">
+            <div class="control-btn">
+                <button class="control-btn__decrease shapeDec"><i class="fas fa-minus"></i></button>
+                <button class="control-btn__increase shapeInc"><i class="fas fa-plus"></i></button>
+                <div class="shapes">
+                    <div class="shapes-control-value">
+                        1
+                    </div>
+                    <span> - Number of shapes per sec</span>
+
+                </div>
+                
+            </div>
+            <div class="control-btn">
+                <button class="control-btn__decrease gravityDec"><i class="fas fa-minus"></i></button>
+                <button class="control-btn__increase gravityInc"><i class="fas fa-plus"></i></button>
+                <div class="gravity">
+                    <div class="gravity-value">
+                        1 
+                    </div>
+                    <span>- Gravity value</span>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+
+
+    <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/utils.js"></script>
+    <script type="module" src="js/data.js"></script>
+    <script type="module" src="js/constans.js"></script>
+</body>
+
+</html>

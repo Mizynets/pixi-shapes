@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 904px;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+#root{
+border: 2px solid black;
+height: fit-content;
+margin-bottom: 10px;
+}
+
+.info{
+    display: flex;
+}
+
+.info__shapes, .info__area{
+border-top: 2px solid black;
+border-left: 2px solid black;
+padding: 10px 20px;
+min-width: 300px;
+width: fit-content;
+font-weight: bold;
+display: flex;
+}
+.info__num-of-shapes, .info__surface-area{
+    margin-right: 5px;
+    color: red;
+}
+.info__area{
+border-right: 2px solid black;
+}
+
+.control-flex{
+    display: flex;
+}
+
+.control-btn{
+    display: flex;
+    margin-right: 30px;
+}
+.control-btn__decrease, .control-btn__increase{
+    border: 3px solid black;
+    padding: 10px 20px;
+    outline: none;
+}
+
+.fas{
+  font-size: 20px;
+  color: #2A7AEE;
+}
+.control-btn__decrease{
+    border-radius: 10px 0 0 10px;
+    border-right: none;
+}
+.control-btn__increase{
+    border-radius: 0 10px 10px 0;
+    margin-right: 10px;
+}
+.shapes, .gravity{
+    border: 1px solid black;
+    padding: 3px 10px;
+    min-width: 30px;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    
+}
+.gravity-value, .shapes-control-value{
+    margin-right: 5px;
+    color: red;
+}
